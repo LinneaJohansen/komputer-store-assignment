@@ -1,0 +1,95 @@
+.nav-bar{
+  background-color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.top-grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 12.5px;
+}
+
+.bottom-grid-container{
+  display: grid;
+  grid-template-columns: auto 360px auto;
+  padding: 12.5px;
+}
+
+.upper-grid-col{
+  text-align: center;
+  border-radius: 25px;
+  background: rgb(214, 214, 214);
+  margin: 10px;
+  padding:10px;
+  font-size: 30px;
+}
+
+.lower-grid-col{
+  text-align: center;
+  background: rgb(214, 214, 214);
+  font-size: 30px;
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4;
+}
+
+.button:hover {
+  background-color: #2f6831; /* Green */
+}
+
+.hidden_button {
+  visibility: hidden;
+  background-color: #4CAF50; /* Green */
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4;
+}
+
+.hidden_button:hover {
+  background-color: #2f6831; /* Green */
+}
+
+.computer-select {
+  background-color: #4CAF50; 
+  color: white;
+  border-radius: 10px;
+  border-color: black;;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.computer-select-selected {
+  background-color: #2f6831;
+}
+
+.previewImg {
+  width: 420px;
+  height: 360px;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  text-align: center;
+}

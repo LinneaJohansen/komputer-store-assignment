@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="The home page to my first ever website."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+     <link href="style.css" rel="stylesheet"/>
+  </head>
+
+  <nav class="nav-bar">
+    <h2>Komputer Store</h2>
+  </nav>
+
+  <body>
+    <div class="top-grid-container">
+
+        <div class="upper-grid-col">
+          <h3>Bank</h3>
+          <span>Current balance: </span><span id="currBalance">0</span>
+          <p></p>
+          <button onclick="handleLoan()"id="loanBtn" class="button">Get a loan</button>
+          <button onclick="handleLoanPayback()" id="paybackBtn" class="button">Repay Loan</button>
+        </div>
+        
+        <div class="upper-grid-col">
+        <h3>Work</h3>
+        <span>Pay: </span><span id="currPay">0</span>
+           <p></p>
+          <button onclick="handleBankBalance()" id="bankBtn" class="button">Bank</button>
+          <button onclick="handleWorkBalance()" id="workBtn" class="button">Work</button>
+        </div>
+
+        <div class="upper-grid-col">
+            <h3>Laptops</h3> 
+            <p>Choose a laptop to review</p>
+            <select name="computers" id="computers" class = "computer-select">
+            </select>
+        </div>
+        </div>
+
+    <div class="bottom-grid-container">
+        <div class="lower-grid-col">
+          <img src="https://noroff-komputer-store-api.herokuapp.com/assets/images/1.png" class="previewImg" id="previewImg" alt="Laptop picture">
+        </div>
+        <div class="lower-grid-col">
+          <p id = "description" style = "font-size: 24px;">Description</p>
+          <p id ="specs" style="font-size: 20px">Lots of information</p>
+        </div>
+        <div class="lower-grid-col">
+          <h3>Total Price: </h3>
+          <p id="price">0</p>
+          <button onclick="handleComputerPurchase()" id="buyBtn" class="button">Buy now</button>
+        </div>
+    </div> 
+  </div> 
+
+  <script src="script.js"></script>
+  </body>
+</html>
