@@ -15,21 +15,25 @@ const imgElem = document.getElementById("previewImg");
 const paybackButtonElem = document.getElementById("paybackBtn");
 paybackButtonElem.style.visibility="hidden";
 
+//Initializing empty array for computers
 let computers = [];
 
-let me = new user(0, 0, 0);
 
+//Making a constructor and defining initial user configs as 0
+let me = new user(0, 0, 0);
 function user (currPay, currBalance, loan) {
     this.currPay = currPay;
     this.currBalance = currBalance
     this.loan = loan;
 }
 
+//Fetching data from Heroku
 fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
     .then(response => response.json())
     .then(data => computers = data)
     .then(computers => addComputers(computers));
 
+//Adding computers into array and initalizing webpage with the first computer in the list as shown
 const addComputers = (computers) => {
     //Add computers into array
     computers.forEach(x => addComputer(x));
@@ -45,6 +49,7 @@ const addComputers = (computers) => {
     imgElem.src = "https://noroff-komputer-store-api.herokuapp.com/assets/images/1.png";
 }
 
+//
 const addComputer = (computer) => {
     const compElem = document.createElement("option");
     compElem.value = computer.id;
@@ -52,6 +57,7 @@ const addComputer = (computer) => {
     compsElem.appendChild(compElem);
 }
 
+//Handles the changes on website when new computer is selected
 const handleComputerChange = e => {
     const selectedComputer = computers[e.target.selectedIndex];
     priceElem.innerText = selectedComputer.price;
@@ -64,11 +70,13 @@ const handleComputerChange = e => {
     imgElem.src = "https://noroff-komputer-store-api.herokuapp.com/"+selectedComputer.image;
 }
 
+//Handles the work button by adding currency to pay
 function handleWorkBalance() {
     me.currPay += 100;
     payElem.innerText = me.currPay;
 }
 
+//Handles the bank button, adding currency to bank and deducting potential loan costs
 function handleBankBalance() {
     if(me.loan > 0){
         const payback = parseInt(me.currPay/10);
@@ -87,6 +95,7 @@ function handleBankBalance() {
 
 }
 
+//Handles the loan button, giving prompt on how much the user wishes to recieve
 function handleLoan() {
     const requestedLoan = prompt("Please enter the amount you request.");
     if(requestedLoan != null) {
@@ -97,6 +106,7 @@ function handleLoan() {
     }
 }
 
+//Handles the loan payback button, prompts user on how much they wish to pay back
 function handleLoanPayback(){
     const requestPayback = prompt("Your current loan is "+me.loan+". Please enter how much you with to pay back.");
     if(requestPayback != null) {
@@ -111,6 +121,7 @@ function handleLoanPayback(){
     }
 }
 
+//Handles purchase of computer, deducts price from bank balance
 function handleComputerPurchase(){
     if(me.currBalance-parseInt(priceElem.innerText) < 0) {
         window.alert("You do not have enough currency for that item");
@@ -121,6 +132,7 @@ function handleComputerPurchase(){
     }
 }
 
+//Handles whenever the payback button is visible or not
 function paybackButtonCheck(){
     if(me.loan>0){
         paybackButtonElem.style.visibility="visible";
@@ -129,4 +141,5 @@ function paybackButtonCheck(){
     }
 }
 
+//Listener for computer change
 compsElem.addEventListener("change", handleComputerChange);
