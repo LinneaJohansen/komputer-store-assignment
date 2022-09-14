@@ -1,15 +1,20 @@
 # Front-end Assignment 1: Komputer Store
+
 ​
+
 ### Table of contents
-* [Introduction](#introduction)
-* [Wireframe](#wireframe)
-* [HTML code and CSS](#html-code-and-css)
-* [Adding the JavaScript Code](#adding-the-javascript-code)
-* [Where to access/installations](#where-to-acces/installation)
-* [Author](#author)
-​
-​
+
+- [Introduction](#introduction)
+- [Wireframe](#wireframe)
+- [HTML code and CSS](#html-code-and-css)
+- [Adding the JavaScript Code](#adding-the-javascript-code)
+- [Where to access/installations](#where-to-acces/installation)
+- [Author](#author)
+  ​
+  ​
+
 ## Introduction
+
 ​
 This is my submission for the first assignment in front-end portion of the Java accelerate course provided by Noroff university.
 In this assignment, I had to tackle a few challenges; create a webpage using HTML and CSS, providing Javascript code to the website to make the functions within it work as intended by the assignment text, pull data from a Heroku webpage and finally, deploy my project onto Heroku.
@@ -18,6 +23,8 @@ The assignment was handed out by Piotr Dziubinski.
 ## Wireframe
 
 I initialized my project by creating a wireframe to serve as a guide when developing the website. The tool I used for this was Figma, which is an excellent site for creating initial website designs and pitches. I took great inspiration from the picture provided in the assignment text, but made it more clear for myself by organizing what part of the website serves what function; what is a button, what is pure texts, etc.
+
+![Komputer-store-wireframe.png](./Komputer-store-wireframe.png)
 
 ## HTML Code and CSS
 
@@ -36,34 +43,42 @@ Once these were implemented and I had connected the text elements I intended to 
 
 Finally, the button handling money going from pay to balance simply transfers that money over with a simple + on the balance side and - on the pay side, minus potential loan cutoffs (10%).
 ​
+
 ### DIRECTORY
+
 ​
-``` 
+
+```
 | README.md
 |___ komputer-store-assignment
-|      | index.html 
+|      | index.html
 |      | style.css
 |      | script.js
 ```
+
 ​
 ​
+
 ## Where to access/installations
 
 Create an SSH key and pull the project from the git repository.
 
 ## Project status
+
 Finished.
 ​
+
 ## License
+
 This project is open-source. You are free to use any of the code in your own projects, as long as the work is credited.
 ​
 
 ## Authors and acknowledgment
+
 **Code authos:**
+
 - [Linnea Johansen](https://gitlab.com/LinneaJohansen)
 
-
-
-**Assignment given by:** 
+**Assignment given by:**
 
 Piotr Dziubinski, Lecturer at Noroff University College
